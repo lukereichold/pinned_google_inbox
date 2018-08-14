@@ -1,0 +1,47 @@
+{
+  "manifest_version": 2,
+  "name": "Pinned Google Inbox",
+  "version": "1.0",
+  "description": "Go to the pinned Google Inbox tab. If it doesn't exist, create it.",
+
+  "developer": {
+    "name": "Luke Reichold",
+    "url": "http://lukereichold.com"
+  },
+
+  "icons": {
+    "48": "icons/inbox_48.png",
+    "96": "icons/inbox_96.png"
+  },
+
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/inbox_16.png",
+      "32": "icons/inbox_32.png"
+    }
+  },
+
+  "permissions": [
+    "tabs",
+    "https://inbox.google.com/*"
+  ],
+
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+I"
+      }
+    }
+  },
+
+  "options_ui": {
+    "page": "options/options.html",
+    "browser_style": true
+  }
+}
